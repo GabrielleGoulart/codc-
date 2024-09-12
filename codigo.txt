@@ -1,23 +1,5 @@
 Desenvolvimento em C++
-PAULO ROBERTO MARTINS
-•
-4 de set. (editado: Ontem)
-Junto desta lisa devemos desenvolver a seção de "Funções" no site W3Schools.
-Lista deve ser desenvolvida toda em C++.
-Inicialmenente iremos nesta lista ate o comando SE(If).
-Comentários da turma
-Seus trabalhos
-Atribuído
 
-exercicio.txt
-Texto
-
-codigos.txt
-Texto
-
-codigos.txt
-Texto
-Comentários particulares
 3 Comando SE (operadores de comparação):
 
 a-
