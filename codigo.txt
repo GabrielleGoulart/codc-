@@ -1,0 +1,532 @@
+Desenvolvimento em C++
+PAULO ROBERTO MARTINS
+•
+4 de set. (editado: Ontem)
+Junto desta lisa devemos desenvolver a seção de "Funções" no site W3Schools.
+Lista deve ser desenvolvida toda em C++.
+Inicialmenente iremos nesta lista ate o comando SE(If).
+Comentários da turma
+Seus trabalhos
+Atribuído
+
+exercicio.txt
+Texto
+
+codigos.txt
+Texto
+
+codigos.txt
+Texto
+Comentários particulares
+3 Comando SE (operadores de comparação):
+
+a-
+#include <iostream>
+
+int main() {
+    int primeiro_numero, segundo_numero;
+
+    std::cout << "Digite o primeiro número inteiro: ";
+    std::cin >> primeiro_numero;
+
+    std::cout << "Digite o segundo número inteiro: ";
+    std::cin >> segundo_numero;
+
+    // Verifica se o primeiro número é maior que o segundo
+    if (primeiro_numero > segundo_numero) {
+        std::cout << "O primeiro número é maior que o segundo número." << std::endl;
+    } else {
+        std::cout << "O primeiro número não é maior que o segundo número." << std::endl;
+    }
+
+    return 0;
+}
+
+
+
+b-
+#include <iostream>
+
+int main() {
+    int primeiro_numero, segundo_numero;
+
+    std::cout << "Digite o primeiro número inteiro: ";
+    std::cin >> primeiro_numero;
+
+    std::cout << "Digite o segundo número inteiro: ";
+    std::cin >> segundo_numero;
+
+    // Verifica se o primeiro número é menor que o segundo
+    if (primeiro_numero < segundo_numero) {
+        std::cout << "O primeiro número é menor que o segundo número." << std::endl;
+    } else {
+        std::cout << "O primeiro número não é menor que o segundo número." << std::endl;
+    }
+
+    return 0;
+}
+
+
+
+c-
+#include <iostream>
+
+int main() {
+    int primeiro_numero, segundo_numero;
+
+    std::cout << "Digite o primeiro número inteiro: ";
+    std::cin >> primeiro_numero;
+
+    std::cout << "Digite o segundo número inteiro: ";
+    std::cin >> segundo_numero;
+
+    if (primeiro_numero == segundo_numero) {
+        std::cout << "Os dois números são iguais." << std::endl;
+    } else {
+        std::cout << "Os dois números não são iguais." << std::endl;
+    }
+
+    return 0;
+}
+
+
+
+d-
+#include <iostream>
+
+int main() {
+    int primeiro_numero, segundo_numero, terceiro_numero;
+
+    std::cout << "Digite o primeiro número inteiro: ";
+    std::cin >> primeiro_numero;
+
+    std::cout << "Digite o segundo número inteiro: ";
+    std::cin >> segundo_numero;
+
+    std::cout << "Digite o terceiro número inteiro: ";
+    std::cin >> terceiro_numero;
+
+    // Verifica se o primeiro número é menor que o segundo e maior que o terceiro
+    if (primeiro_numero < segundo_numero && primeiro_numero > terceiro_numero) {
+        std::cout << "O primeiro número é menor que o segundo e maior que o terceiro." << std::endl;
+    } else {
+        std::cout << "O primeiro número não atende às condições especificadas." << std::endl;
+    }
+
+    return 0;
+
+
+
+
+e-
+#include <iostream>
+
+int main() {
+    // Declaração das variáveis para armazenar os números reais
+    double primeiro_numero, segundo_numero;
+
+    std::cout << "Digite o primeiro número real: ";
+    std::cin >> primeiro_numero;
+
+    std::cout << "Digite o segundo número real: ";
+    std::cin >> segundo_numero;
+
+    // Verifica se o primeiro número é maior ou igual ao segundo número
+    if (primeiro_numero >= segundo_numero) {
+        std::cout << "O primeiro número é maior ou igual ao segundo número." << std::endl;
+    } else {
+        std::cout << "O primeiro número não é maior ou igual ao segundo número." << std::endl;
+    }
+
+    return 0;
+}
+
+
+
+f-
+#include <iostream>
+
+int main() {
+    int numero;
+
+    // Solicita ao usuário para digitar um número inteiro:
+    std::cout << "Digite um número inteiro: ";
+    std::cin >> numero;
+
+    // Verifica se o número é par:
+    if (numero % 2 == 0) {
+        std::cout << "O número " << numero << " é par." << std::endl;
+    } else {
+        std::cout << "O número " << numero << " não é par." << std::endl;
+    }
+
+    return 0;
+}
+
+
+
+g-
+#include <iostream>
+
+int main() {
+    int numero;
+
+    std::cout << "Digite um número inteiro: ";
+    std::cin >> numero;
+
+    // Verifica se o número é ímpar:
+    if (numero % 2 != 0) {
+        std::cout << "O número " << numero << " é ímpar." << std::endl;
+    } else {
+        std::cout << "O número " << numero << " não é ímpar." << std::endl;
+    }
+
+    return 0;
+}
+
+
+
+h-
+#include <iostream>
+
+int main() {
+    int ano;
+
+    // Solicita ao usuário para digitar um ano:
+    std::cout << "Digite um ano: ";
+    std::cin >> ano;
+
+    // Verifica se o ano é bissexto:
+    if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)) {
+        std::cout << ano << " é um ano bissexto." << std::endl;
+    } else {
+        std::cout << ano << " não é um ano bissexto." << std::endl;
+    }
+
+    return 0;
+}
+
+
+i-
+#include <iostream>
+using namespace std;
+
+  
+int main() {
+
+    double numero1, numero2;
+
+    cout << "Digite o primeiro número real: ";
+    cin >> numero1;
+
+    cout << "Digite o segundo número real: ";
+    cin >> numero2;
+
+    if (numero1 <= numero2) {
+        cout << "O primeiro número é menor ou igual ao segundo número." ;
+    } else {
+    cout << "O primeiro número não é menor ou igual ao segundo número." ;
+    }
+
+    return 0;
+}
+
+
+
+j-
+
+#include <iostream>
+
+int main() {
+    // Declara a variável para armazenar o número inteiro
+    int numero;
+
+    // Solicita ao usuário que insira um número inteiro
+    std::cout << "Digite um número inteiro: ";
+    std::cin >> numero;
+
+    // Verifica se o número é positivo e exibe a mensagem correspondente
+    if (numero > 0) {
+        std::cout << "O número é positivo." << std::endl;
+    } else {
+        std::cout << "O número não é positivo." << std::endl;
+    }
+
+    return 0;
+}
+
+
+
+k-
+#include <iostream>
+
+int main() {
+    // Declara a variável para armazenar o número inteiro
+    int numero;
+
+    // Solicita ao usuário que insira um número inteiro
+    std::cout << "Digite um número inteiro: ";
+    std::cin >> numero;
+
+    // Verifica se o número é negativo e exibe a mensagem correspondente
+    if (numero < 0) {
+        std::cout << "O número é negativo." << std::endl;
+    } else {
+        std::cout << "O número não é negativo." << std::endl;
+    }
+
+    return 0;
+}
+
+
+
+l-
+#include <iostream>
+#include <cmath>  // Para a função std::abs
+
+int main() {
+    // Declara variáveis para armazenar os dois números inteiros
+    int numero1, numero2;
+
+    // Solicita ao usuário que insira o primeiro número inteiro
+    std::cout << "Digite o primeiro número inteiro: ";
+    std::cin >> numero1;
+
+    // Solicita ao usuário que insira o segundo número inteiro
+    std::cout << "Digite o segundo número inteiro: ";
+    std::cin >> numero2;
+
+    // Calcula a diferença absoluta entre os dois números
+    int diferenca = std::abs(numero1 - numero2);
+
+    // Verifica se a diferença é menor ou igual a 10 e exibe a mensagem correspondente
+    if (diferenca <= 10) {
+        std::cout << "A diferença entre os dois números é menor ou igual a 10." << std::endl;
+    } else {
+        std::cout << "A diferença entre os dois números é maior que 10." << std::endl;
+    }
+
+    return 0;
+}
+
+
+
+m-
+
+#include <iostream>
+
+int main() {
+    int mes;
+    
+    // Exibe o menu com as opções de meses:
+    std::cout << "Escolha um mês do ano:" << std::endl;
+    std::cout << "1. Janeiro" << std::endl;
+    std::cout << "2. Fevereiro" << std::endl;
+    std::cout << "3. Março" << std::endl;
+    std::cout << "4. Abril" << std::endl;
+    std::cout << "5. Maio" << std::endl;
+    std::cout << "6. Junho" << std::endl;
+    std::cout << "7. Julho" << std::endl;
+    std::cout << "8. Agosto" << std::endl;
+    std::cout << "9. Setembro" << std::endl;
+    std::cout << "10. Outubro" << std::endl;
+    std::cout << "11. Novembro" << std::endl;
+    std::cout << "12. Dezembro" << std::endl;
+    std::cout << "Digite o número correspondente ao mês escolhido: ";
+    
+    // Solicita ao usuário que insira o número do mês
+    std::cin >> mes;
+    
+    // Exibe a quantidade de dias do mês escolhido:
+    switch (mes) {
+        case 1: // Janeiro
+        case 3: // Março
+        case 5: // Maio
+        case 7: // Julho
+        case 8: // Agosto
+        case 10: // Outubro
+        case 12: // Dezembro
+            std::cout << "O mês escolhido tem 31 dias." << std::endl;
+            break;
+        case 4: // Abril
+        case 6: // Junho
+        case 9: // Setembro
+        case 11: // Novembro
+            std::cout << "O mês escolhido tem 30 dias." << std::endl;
+            break;
+        case 2: // Fevereiro
+            std::cout << "Fevereiro pode ter 28 ou 29 dias, dependendo se é um ano bissexto." << std::endl;
+            break;
+        default:
+            std::cout << "Número do mês inválido. Digite um número entre 1 e 12." << std::endl;
+            break;
+    }
+
+    return 0;
+}
+
+
+n-
+#include <iostream>
+
+int main() {
+    int idade;
+    char possuiCarteira;
+
+    std::cout << "Digite sua idade: ";
+    std::cin >> idade;
+
+    std::cout << "Você possui carteira de motorista? ";
+    std::cin >> possuiCarteira;
+
+
+    if (idade > 18 && (possuiCarteira == 's' || possuiCarteira == 'S')) {
+        std::cout << "Você pode dirigir." << std::endl;
+    } else {
+        std::cout << "Você não pode dirigir." << std::endl;
+    }
+
+    return 0;
+}
+
+
+
+
+o-
+#include <iostream>
+
+int main() {
+    char desejaComprar;
+    double dinheiroSuficiente;
+
+    std::cout << "Você deseja comprar um carro novo? ";
+    std::cin >> desejaComprar;
+
+    if (desejaComprar == 's' || desejaComprar == 'S') {
+     
+        std::cout << "Você tem dinheiro suficiente para comprar o carro? ";
+        std::cin >> dinheiroSuficiente;
+
+        // Verifica se o valor disponível é suficiente (vamos considerar um valor fixo, por exemplo, 50000)
+        const double valorCarro = 50000.0; // Valor estimado do carro
+
+        if (dinheiroSuficiente >= valorCarro) {
+            std::cout << "Parabéns, você pode comprar um carro novo!" << std::endl;
+        } else {
+            std::cout << "Você não tem dinheiro suficiente para comprar o carro novo." << std::endl;
+        }
+    } else {
+        std::cout << "Você decidiu não comprar um carro novo." << std::endl;
+    }
+
+    return 0;
+}
+
+
+
+p-
+#include <iostream>
+using namespace std;
+
+  
+int main() {
+
+    char possuiDiploma;
+    int idade;
+
+    cout << "Você possui um diploma de ensino superior? (s/n): ";
+    cin >> possuiDiploma;
+
+    std::cout << "Qual é a sua idade? ";
+    std::cin >> idade;
+
+
+    if ((possuiDiploma == 's' || possuiDiploma == 'S') && idade > 21) {
+        << "Parabéns, você está qualificado para a vaga!" << std::endl;
+    } else {
+        std::cout << "você não está qualificado para a vaga." << std::endl;
+    }
+
+}
+
+
+
+q-
+#include <iostream>
+using namespace std;
+
+ 
+int main() {
+    char assinante;
+    char assistiuSerie;
+
+    cout << "Você é assinante de um serviço de streaming? ";
+    cin >> assinante;
+
+    cout << "Você já assistiu à série específica? ";
+    cin >> assistiuSerie;
+
+    if ((assinante == 's' || assinante == 'S') && (assistiuSerie == 's' || assistiuSerie == 'S')) {
+        cout << "Ótimo, agora você pode assistir à nova temporada!" << std::endl;
+    } else {
+        cout << "Você não pode assistir à nova temporada ainda." << std::endl;
+    }
+
+}
+
+
+
+r- 
+#include <iostream>
+using namespace std;
+
+  
+int main() {
+    string nome;
+    int idade;
+
+    cout << "Digite seu nome: ";
+    getline(std::cin, nome);  // Usa std::getline para ler o nome completo
+
+    cout << "Digite sua idade: ";
+    cin >> idade;
+
+    // Verifica se o nome possui mais de 3 caracteres e se a idade é maior ou igual a 18 anos
+    if (nome.length() > 3 && idade >= 18) {
+        cout << "Acesso permitido";
+    } else {
+        cout << "Acesso negado";
+    }
+
+   
+}
+
+
+s-
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    char adicionarAcucar;
+    char adicionarLeite;
+
+    cout << "Você deseja adicionar açúcar ao seu café? ";
+    cin >> adicionarAcucar;
+
+    cout << "Você deseja adicionar leite ao seu café? ";
+    cin >> adicionarLeite;
+
+    // Verifica se o usuário deseja adicionar açúcar ou leite:
+    if (adicionarAcucar == 's' || adicionarAcucar == 'S' || adicionarLeite == 's' || adicionarLeite == 'S') {
+        cout << "Café com adicional preparado!" << ;
+    } else {
+        cout << "Café sem adicionais preparado." << ;
+    }
+
+  
+}
+
+
+
+t-
