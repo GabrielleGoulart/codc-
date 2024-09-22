@@ -1,0 +1,43 @@
+#include <iostream>
+#include <iomanip>
+
+int main() {
+    float valorHora, horasTrabalhadas;
+
+    std::cout << "Digite o valor da hora: R$ ";
+    std::cin >> valorHora;
+    std::cout << "Digite a quantidade de horas trabalhadas no mês: ";
+    std::cin >> horasTrabalhadas;
+
+    float salarioBruto = valorHora * horasTrabalhadas;
+
+    float descontoIR = 0.0;
+    if (salarioBruto <= 900) {
+        descontoIR = 0; // Isento
+    } else if (salarioBruto <= 1500) {
+        descontoIR = salarioBruto * 0.05; // 5%
+    } else if (salarioBruto <= 2500) {
+        descontoIR = salarioBruto * 0.10; // 10%
+    } else {
+        descontoIR = salarioBruto * 0.20; // 20%
+    }
+
+    float descontoINSS = salarioBruto * 0.10; // 10%
+
+    float fgts = salarioBruto * 0.11; // 11%
+
+    float totalDescontos = descontoIR + descontoINSS;
+
+    float salarioLiquido = salarioBruto - totalDescontos;
+
+    // Imprime as informações:
+    std::cout << std::fixed << std::setprecision(2); // Configura a precisão para duas casas decimais
+    std::cout << "Salário Bruto: (R$ " << valorHora << " * " << horasTrabalhadas << ") : R$ " << salarioBruto << std::endl;
+    std::cout << "(-) IR: R$ " << descontoIR << std::endl;
+    std::cout << "(-) INSS: R$ " << descontoINSS << std::endl;
+    std::cout << "FGTS: R$ " << fgts << std::endl;
+    std::cout << "Total de descontos: R$ " << totalDescontos << std::endl;
+    std::cout << "Salário Líquido: R$ " << salarioLiquido << std::endl;
+
+    return 0;
+}
