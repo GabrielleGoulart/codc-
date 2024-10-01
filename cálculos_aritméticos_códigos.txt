@@ -1,0 +1,559 @@
+﻿Lista de Exercícios 
+
+
+2- Cálculos aritméticos:
+
+
+a-
+#include <iostream>
+
+
+int main() {
+    // Declara variáveis para armazenar os dois números
+    double numero1, numero2;
+
+
+    std::cout << "Digite o primeiro número: ";
+    std::cin >> numero1;
+
+
+    std::cout << "Digite o segundo número: ";
+    std::cin >> numero2;
+
+
+    double soma = numero1 + numero2;
+
+
+    // Exibe o resultado da soma:
+    std::cout << "A soma dos números é: " << soma << std::endl;
+
+
+    return 0;
+}
+
+
+
+
+
+
+b-
+#include <iostream>
+
+
+int main() {
+    // Declara uma variável para armazenar o número digitado
+    double numero;
+
+
+    std::cout << "Digite um número: ";
+    std::cin >> numero;
+
+
+    double dobro = numero * 2;
+
+
+    // Exibe o resultado:
+    std::cout << "O dobro do número é: " << dobro << std::endl;
+
+
+    return 0;
+}
+
+
+
+
+
+
+c-
+#include <iostream>
+
+
+int main() {
+    // Declara uma variável para armazenar o número digitado
+    double numero;
+
+
+    std::cout << "Digite um número: ";
+    std::cin >> numero;
+
+
+    double metade = numero / 2;
+
+
+    // Exiba o resultado:
+    std::cout << "A metade do número é: " << metade << std::endl;
+
+
+    return 0;
+}
+
+
+
+
+
+
+d-
+#include <iostream>
+
+
+int main() {
+    // Declara variáveis para armazenar os dois números
+    double numero1, numero2;
+
+
+    std::cout << "Digite o primeiro número: ";
+    std::cin >> numero1;
+
+
+    std::cout << "Digite o segundo número: ";
+    std::cin >> numero2;
+
+
+    if (numero2 == 0) {
+        std::cout << "Erro: Divisão por zero não é permitida." << std::endl;
+    } else {
+       
+        double resultado = numero1 / numero2;
+
+
+        // Exibe o resultado da divisão:
+        std::cout << "O resultado da divisão de " << numero1 << " por " << numero2 << " é: " << resultado << std::endl;
+    }
+
+
+    return 0;
+}
+
+
+
+
+
+
+e-
+#include <iostream>
+#include <cmath>
+
+
+
+
+double raizq(double numero) {
+    return std::sqrt(numero); 
+
+
+int main() {
+    double numero;
+
+
+    std::cout << "Digite um número: ";
+    std::cin >> numero;
+
+
+    if (numero < 0) {
+        std::cout << "Erro: Não é possível calcular a raiz quadrada de um número negativo." << std::endl;
+    } else {
+
+
+        double resultado = raizq(numero);
+
+
+        // Exibe o resultado:
+        std::cout << "A raiz quadrada de " << numero << " é: " << resultado << std::endl;
+    }
+
+
+    return 0;
+}
+
+
+
+
+
+
+f-
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    float num1, num2;
+
+
+    cout << "Digite o primeiro número: ";
+    cin >> num1;
+
+
+    cout << "Digite o segundo número: ";
+    cin >> num2;
+
+
+    float resultado = num2 - num1;
+
+
+    // Exibe o resultado:
+    cout << "O resultado da subtração do segundo pelo primeiro é: " << resultado << endl;
+
+
+    return 0;
+}
+
+
+
+
+
+
+g-
+#include <iostream>
+#include <cmath>  
+using namespace std;
+
+
+int main() {
+    float numero;
+
+
+    cout << "Digite um número: ";
+    cin >> numero;
+
+
+    float valor_absoluto = fabs(numero); 
+
+
+    // Exibe o valor absoluto:
+    cout << "O valor absoluto de " << numero << " é: " << valor_absoluto << endl;
+
+
+    return 0;
+}
+
+
+
+
+
+
+h-
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    float num1, num2;
+
+
+    cout << "Digite o primeiro número: ";
+    cin >> num1;
+
+
+    cout << "Digite o segundo número: ";
+    cin >> num2;
+
+
+    float resultado = num1 * num2;
+
+
+    // Exibe o resultado:
+    cout << "O resultado da multiplicação é: " << resultado << endl;
+
+
+    return 0;
+}
+
+
+
+
+i-
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    int numero;
+
+
+    cout << "Digite um número: ";
+    cin >> numero;
+
+
+    int resto = numero % 2;
+
+
+    // Exibe o resto:
+    cout << "O resto da divisão de " << numero << " por 2 é: " << resto << endl;
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+j-
+#include <iostream>
+using namespace std;
+
+
+int main() {
+
+
+    int numero;
+
+
+    cout << "Digite um número: ";
+    cin >> numero;
+
+
+    if (numero != 0) {
+        int resultado = 10 / numero;
+
+
+        // Exibe o resultado:
+        cout << "O resultado da divisão inteira de 10 por " << numero << " é: " << resultado << endl;
+    } else {
+        cout << "Divisão por zero não é permitida!" << endl;
+    }
+
+
+    return 0;
+}
+
+
+
+
+k-
+#include <iostream>
+using namespace std;
+
+
+int main() {
+   
+    float num1, num2, num3;
+
+
+    cout << "Digite o primeiro número: ";
+    cin >> num1;
+
+
+    cout << "Digite o segundo número: ";
+    cin >> num2;
+
+
+    cout << "Digite o terceiro número: ";
+    cin >> num3;
+
+
+    float media = (num1 + num2 + num3) / 3;
+
+
+    // Exibe o resultado da média:
+    cout << "A média aritmética dos números é: " << media << endl;
+
+
+    return 0;
+}
+
+
+
+
+
+
+l-
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    float peso, altura;
+
+
+    cout << "Digite seu peso em kg: ";
+    cin >> peso;
+
+
+    cout << "Digite sua altura em metros: ";
+    cin >> altura;
+
+
+    if (altura != 0) {
+        // Calcula o Índice de Massa Corporal (IMC)
+        float imc = peso / (altura * altura);
+
+
+        cout << "Seu Índice de Massa Corporal (IMC) é: " << imc << endl;
+    } else {
+      
+        cout << "A altura não pode ser zero!" << endl;
+    }
+
+
+    return 0;
+}
+
+
+
+
+
+
+m-
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    float celsius;
+
+
+    cout << "Digite a temperatura em Celsius: ";
+    cin >> celsius;
+
+
+    float fahrenheit = (celsius * 9 / 5) + 32;
+
+
+    // Exibe o resultado da conversão:
+    cout << "A temperatura em Fahrenheit é: " << fahrenheit << endl;
+
+
+    return 0;
+}
+
+
+
+
+
+
+n-
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    float preco, desconto;
+
+
+    cout << "Digite o preço do produto: ";
+    cin >> preco;
+
+
+    cout << "Digite o desconto em porcentagem: ";
+    cin >> desconto;
+
+
+    float valor_desconto = (preco * desconto) / 100;
+
+
+    // Calcula o preço final com o desconto
+    float preco_final = preco - valor_desconto;
+
+
+    // Exibe o preço final
+    cout << "O preço final com o desconto é: " << preco_final << endl;
+
+
+    return 0;
+}
+
+
+
+
+
+
+o-
+#include <iostream>
+#include <cmath> 
+using namespace std;
+
+
+int main() {
+    float raio;
+
+
+    cout << "Digite o raio do círculo: ";
+    cin >> raio;
+
+
+    // Calcula a área do círculo usando a fórmula: Área = π * raio^2
+    float area = M_PI * pow(raio, 2);
+
+
+    // Exibe a área do círculo:
+    cout << "A área do círculo com raio " << raio << " é: " << area << endl;
+
+
+    return 0;
+}
+
+
+
+
+p-
+#include <iostream>
+#include <cmath>  
+using namespace std;
+
+
+int main() {
+    float raio, altura;
+
+
+    cout << "Digite o raio do cilindro: ";
+    cin >> raio;
+
+
+    cout << "Digite a altura do cilindro: ";
+    cin >> altura;
+
+
+    // Calcula o volume do cilindro usando a fórmula: Volume = π * raio^2 * altura
+    float volume = M_PI * pow(raio, 2) * altura;
+
+
+    // Exibe o volume do cilindro:
+    cout << "O volume do cilindro com raio " << raio << " e altura " << altura << " é: " << volume << endl;
+
+
+    return 0;
+}
+
+
+
+
+q-
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    float nota1, nota2, nota3;
+    float peso1, peso2, peso3;
+
+
+    cout << "Digite a primeira nota: ";
+    cin >> nota1;
+    cout << "Digite o peso da primeira nota: ";
+    cin >> peso1;
+
+
+    cout << "Digite a segunda nota: ";
+    cin >> nota2;
+    cout << "Digite o peso da segunda nota: ";
+    cin >> peso2;
+
+
+    cout << "Digite a terceira nota: ";
+    cin >> nota3;
+    cout << "Digite o peso da terceira nota: ";
+    cin >> peso3;
+
+
+    float media_ponderada = (nota1 * peso1 + nota2 * peso2 + nota3 * peso3) / (peso1 + peso2 + peso3);
+
+
+    // Exibe o resultado da média ponderada:
+    cout << "A média ponderada das notas é: " << media_ponderada << endl;
+
+
+    return 0;
+}

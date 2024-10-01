@@ -1,0 +1,189 @@
+﻿Lista de Exercícios 
+Entrada e Saida de dados:
+
+
+a-
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv) {
+
+
+        
+  int x;
+  std::cout << "digite um número: ";
+  std::cin >> x; 
+  std::cout << "Seu número: ";
+  return 0;
+}
+
+
+
+
+
+
+b-
+#include <iostream>
+using namespace std;
+int main() {        
+  double n;
+  cout << "digite um número real: ";
+  cin >> n; 
+  cout << "Seu número: ";
+  cout << n;
+}
+
+
+
+
+
+
+c-
+#include <iostream>
+#include <string>
+
+
+int main() {
+    // Solicita ao usuário para digitar "verdadeiro" ou "falso"
+    std::string entrada;
+    std::cout << "Digite 'verdadeiro' ou 'falso': ";
+    std::cin >> entrada;
+
+
+    std::cout << "Você digitou: " << entrada << std::endl;
+
+
+    return 0;
+}
+
+
+
+
+
+
+d-
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+int main() {
+    // Declara uma variável para armazenar o nome
+    string nome;
+
+
+    cout << "Digite seu nome: ";
+    getline(cin, nome);  // Lê uma linha inteira, incluindo espaços
+
+
+    cout << "Você digitou o nome: " << nome << endl;
+
+
+    return 0;
+}
+
+
+
+
+
+
+e-
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    // Declara uma variável para armazenar o número decimal
+    float numero_decimal;
+
+
+    cout << "Digite um número decimal: ";
+    cin >> numero_decimal;
+
+
+    cout << "Você digitou o número decimal: " << numero_decimal << endl;
+
+
+    return 0;
+}
+
+
+f-
+#include <iostream>
+#include <string>
+
+
+int main() {
+    // Declara variáveis para armazenar o nome e a idade
+    std::string nome;
+    int idade;
+
+
+    std::cout << "Digite seu nome: ";
+    std::getline(std::cin, nome); 
+
+
+    std::cout << "Digite sua idade: ";
+    std::cin >> idade;
+
+
+    // Exibe as informações digitadas pelo usuário
+    std::cout << "Nome: " << nome << std::endl;
+    std::cout << "Idade: " << idade << std::endl;
+
+
+    return 0;
+}
+
+
+
+
+
+
+g-
+#include <iostream>
+#include <string>
+
+
+int main() {
+    // Declara variáveis para armazenar o endereço
+    std::string numero_casa;
+    std::string rua;
+    std::string bairro;
+    std::string cidade;
+    std::string estado;
+
+
+    std::cout << "Digite o número da casa: ";
+    std::getline(std::cin, numero_casa);
+
+
+    std::cout << "Digite a rua: ";
+    std::getline(std::cin, rua);
+
+
+
+
+    std::cout << "Digite o bairro: ";
+    std::getline(std::cin, bairro);
+
+
+    std::cout << "Digite a cidade: ";
+    std::getline(std::cin, cidade);
+
+
+    std::cout << "Digite o estado: ";
+    std::getline(std::cin, estado);
+
+
+    // Exibe todas as informações do endereço:
+    std::cout << "Endereço completo: " 
+              << numero_casa << ", " 
+              << rua << ", " 
+              << bairro << ", " 
+              << cidade << " - " 
+              << estado 
+              << std::endl;
+
+
+    return 0;
+}

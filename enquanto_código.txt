@@ -1,0 +1,197 @@
+﻿a- 
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    int numero;
+
+
+    cout << "Insira um número inteiro positivo: ";
+    cin >> numero;
+
+
+    if (numero < 0) {
+        cout << "Por favor, insira um número positivo." << endl;
+        return 1; // Termina o programa com código de erro
+    }
+
+
+    // Exibe os números pares de 0 até o número inserido:
+    cout << "Números pares entre 0 e " << numero << " são: ";
+    for (int i = 0; i <= numero; i++) {
+        if (i % 2 == 0) {
+            cout << i << " ";
+        }
+    }
+
+
+    cout << endl;
+
+
+    return 0;
+}
+
+
+
+
+b-
+include <iostream>
+using namespace std;
+
+
+int main() {
+    int numero;
+
+
+    cout << "Digite um número inteiro: ";
+    cin >> numero;
+
+
+    cout << "\nTabuada do " << numero << ":\n";
+    for (int i = 1; i <= 10; i++) {
+        cout << numero << " x " << i << " = " << numero * i << endl;
+    }
+
+
+    return 0;
+}
+
+
+
+
+c-
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    int numero, soma = 0;
+    char continuar;
+
+
+    do {
+        cout << "Digite um número inteiro: ";
+        cin >> numero;
+
+
+        soma += numero;
+
+
+        cout << "Deseja inserir outro número? (s/n): ";
+        cin >> continuar;
+
+
+    } while (continuar == 's' || continuar == 'S');
+
+
+    // Exibe a soma dos números inseridos:
+    cout << "A soma dos números inseridos é: " << soma << endl;
+
+
+    return 0;
+}
+
+
+
+
+d-
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+int main() {
+    string senhaCorreta = "1234";
+    string senhaDigitada;
+    int tentativas = 0;
+    const int maxTentativas = 3;
+
+
+    // Permite ao usuário tentar inserir a senha até 3 vezes
+    while (tentativas < maxTentativas) {
+        cout << "Digite a senha: ";
+        cin >> senhaDigitada;
+
+
+        if (senhaDigitada == senhaCorreta) {
+            cout << "Senha correta! Acesso permitido." << endl;
+            return 0; // Encerra o programa com sucesso
+        } else {
+            tentativas++;
+            cout << "Senha incorreta. Tentativas restantes: " << maxTentativas - tentativas << endl;
+        }
+    }
+
+
+    cout << "Você excedeu o número de tentativas. Acesso negado." << endl;
+
+
+    return 0;
+}
+
+
+
+
+e-
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    int numero, soma = 0;
+
+
+    do {
+        cout << "Digite um número inteiro (negativo para sair): ";
+        cin >> numero;
+
+
+        if (numero >= 0) {
+            soma += numero; 
+        }
+    } while (numero >= 0); 
+
+
+    // Exibe a soma dos números inseridos, excluindo o negativo
+    cout << "A soma dos números inseridos é: " << soma << endl;
+
+
+    return 0;
+}
+
+
+
+
+
+
+f-
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    int numero;
+
+
+    cout << "Digite um número inteiro positivo: ";
+    cin >> numero;
+
+
+    // Verifica se o número é positivo
+    if (numero < 0) {
+        cout << "Por favor, insira um número inteiro positivo." << endl;
+    } else {
+       
+        cout << "Números pares entre 0 e " << numero << " são: ";
+        for (int i = 0; i <= numero; i++) {
+            if (i % 2 == 0) {
+                cout << i << " ";
+            }
+        }
+        cout << endl;
+    }
+
+
+    return 0;
+}

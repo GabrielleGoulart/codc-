@@ -1,0 +1,368 @@
+﻿a-
+#include <iostream>
+#include <vector>
+
+
+int main() {
+    // Cria um vetor de inteiros
+    std::vector<int> numeros = {1, 2, 3, 4, 5};
+
+
+    // Imprime cada elemento do vetor
+    for(int i = 0; i < numeros.size(); ++i) {
+        std::cout << "Elemento " << i << ": " << numeros[i] << std::endl;
+    }
+
+
+    return 0;
+}
+
+
+
+
+
+
+b-
+#include <iostream>
+#include <vector>
+
+
+int main() {
+    std::vector<float> numeros = {10.5, 20.3, 30.7, 40.8, 50.2};
+
+
+    float soma = 0.0;
+    for(int i = 0; i < numeros.size(); ++i) {
+        soma += numeros[i];
+    }
+
+
+    float media = soma / numeros.size();
+
+
+    // Exibe a média
+    std::cout << "A média dos valores é: " << media << std::endl;
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+c-
+#include <iostream>
+#include <vector>
+
+
+int main() {
+    std::vector<int> numeros = {10, 25, 35, 5, 60, 15};
+
+
+    int maior = numeros[0];
+
+
+    for(int i = 1; i < numeros.size(); ++i) {
+        if(numeros[i] > maior) {
+            maior = numeros[i];
+        }
+    }
+
+
+    std::cout << "O maior valor no vetor é: " << maior << std::endl;
+
+
+    return 0;
+}
+
+
+
+
+
+
+d-
+#include <iostream>
+#include <vector>
+
+
+int main() {
+    std::vector<int> numeros = {10, 25, 35, 5, 60, 15};
+
+
+    int menor = numeros[0];
+
+
+    for(int i = 1; i < numeros.size(); ++i) {
+        if(numeros[i] < menor) {
+            menor = numeros[i];
+        }
+    }
+
+
+    std::cout << "O menor valor no vetor é: " << menor << std::endl;
+
+
+    return 0;
+}
+
+
+
+
+
+
+e-
+#include <iostream>
+#include <vector>
+#include <algorithm> 
+
+
+int main() {
+    std::vector<int> numeros = {10, 25, 35, 5, 60, 15};
+
+
+    std::sort(numeros.begin(), numeros.end(), std::greater<int>());
+
+
+3.....................................................................................................................2
+    std::cout << "Vetor ordenado em ordem decrescente: ";
+    for(int i = 0; i < numeros.size(); ++i) {
+        std::cout << numeros[i] << " ";
+    }
+    std::cout << std::endl;
+
+
+    return 0;
+}
+
+
+
+
+
+
+f-
+#include <iostream>
+#include <vector>
+#include <algorithm> // Para usar a função sort
+
+
+int main() {
+    std::vector<int> numeros = {10, 25, 35, 5, 60, 15};
+
+
+    std::sort(numeros.begin(), numeros.end());
+
+
+    std::cout << "Vetor ordenado em ordem crescente: ";
+    for (int i = 0; i < numeros.size(); ++i) {
+        std::cout << numeros[i] << " ";
+    }
+    std::cout << std::endl;
+
+
+    return 0;
+}
+
+
+
+
+
+
+g-
+#include <iostream>
+#include <vector>
+#include <algorithm> // Para usar a função sort
+
+
+int main() {
+    std::vector<std::string> nomes = {"Carlos", "Ana", "Bruno", "Fernanda", "Diego"};
+
+
+    std::sort(nomes.begin(), nomes.end());
+
+
+    std::cout << "Lista de nomes em ordem alfabética:" << std::endl;
+    for (int i = 0; i < nomes.size(); ++i) {
+        std::cout << i + 1 << ". " << nomes[i] << std::endl;
+    }
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+h-
+#include <iostream>
+#include <vector>
+
+
+int main() {
+    int lucroMenor10 = 0, lucroEntre10e20 = 0, lucroMaior20 = 0;
+
+
+    std::vector<float> precoCompra(100);
+    std::vector<float> precoVenda(100);
+
+
+    for (int i = 0; i < 100; ++i) {
+        std::cout << "Digite o preco de compra da mercadoria " << i + 1 << ": ";
+        std::cin >> precoCompra[i];
+
+
+        std::cout << "Digite o preco de venda da mercadoria " << i + 1 << ": ";
+        std::cin >> precoVenda[i];
+
+
+        float lucro = ((precoVenda[i] - precoCompra[i]) / precoCompra[i]) * 100;
+
+
+        // Verifica em qual faixa de lucro se enquadra
+        if (lucro < 10) {
+            lucroMenor10++;
+        } else if (lucro >= 10 && lucro <= 20) {
+            lucroEntre10e20++;
+        } else {
+            lucroMaior20++;
+        }
+    }
+
+
+    // Imprime os resultados:
+    std::cout << "\nMercadorias com lucro < 10%: " << lucroMenor10 << std::endl;
+    std::cout << "Mercadorias com 10% <= lucro <= 20%: " << lucroEntre10e20 << std::endl;
+    std::cout << "Mercadorias com lucro > 20%: " << lucroMaior20 << std::endl;
+
+
+    return 0;
+}
+
+
+
+
+
+
+i-
+#include <iostream>
+#include <vector>
+
+
+int main() {
+    const int NUM_MESAS = 30; // Total de mesas
+    const int CAPACIDADE_MESA = 5; // Capacidade de cada mesa
+    std::vector<int> reservas(NUM_MESAS, 0); // Vetor para rastrear reservas, inicializado com 0
+
+
+    while (true) {
+        int codigoMesa;
+        int lugaresDesejados;
+
+
+        std::cout << "Digite o código da mesa (100 a 129) ou -1 para sair: ";
+        std::cin >> codigoMesa;
+
+
+        // Condição de saída
+        if (codigoMesa == -1) {
+            break;
+        }
+
+
+        // Verifica se o código da mesa está dentro do intervalo
+        if (codigoMesa < 100 || codigoMesa > 129) {
+            std::cout << "Código da mesa inválido. Tente novamente." << std::endl;
+            continue;
+        }
+
+
+        int indiceMesa = codigoMesa - 100; // Ajusta o código para o índice do vetor
+
+
+        std::cout << "Digite a quantidade de lugares desejados (1 a " << CAPACIDADE_MESA << "): ";
+        std::cin >> lugaresDesejados;
+
+
+        if (lugaresDesejados < 1 || lugaresDesejados > CAPACIDADE_MESA) {
+            std::cout << "Quantidade de lugares inválida. Tente novamente." << std::endl;
+            continue;
+        }
+
+
+        if (reservas[indiceMesa] + lugaresDesejados > CAPACIDADE_MESA) {
+            std::cout << "Não há lugares suficientes disponíveis na mesa " << codigoMesa << "." << std::endl;
+        } else {
+            // Reserva os lugares
+            reservas[indiceMesa] += lugaresDesejados;
+            std::cout << "Reservados " << lugaresDesejados << " lugares na mesa " << codigoMesa << "." << std::endl;
+        }
+    }
+
+
+    std::cout << "Sistema de reservas encerrado." << std::endl;
+    return 0;
+}
+
+
+
+
+
+
+i-
+#include <iostream>
+#include <vector>
+
+
+int main() {
+    const int NUMEROS = 100;
+    std::vector<float> numeros(NUMEROS);
+    float soma = 0.0;
+
+
+    // Ler os 100 números reais
+    for (int i = 0; i < NUMEROS; ++i) {
+        std::cout << "Digite o número " << i + 1 << ": ";
+        std::cin >> numeros[i];
+        soma += numeros[i]; // Acumula a soma dos números
+    }
+
+
+    // Calcula a média
+    float media = soma / NUMEROS;
+
+
+    // Contadores
+    int iguaisA30 = 0;
+    int maioresQueMedia = 0;
+    int iguaisAMedia = 0;
+
+
+    // Analisando os números
+    for (int i = 0; i < NUMEROS; ++i) {
+        if (numeros[i] == 30) {
+            iguaisA30++;
+        }
+        if (numeros[i] > media) {
+            maioresQueMedia++;
+        }
+        if (numeros[i] == media) {
+            iguaisAMedia++;
+        }
+    }
+
+
+    // Imprime os resultados
+    std::cout << "Quantidade de números iguais a 30: " << iguaisA30 << std::endl;
+    std::cout << "Quantidade de números maiores que a média: " << maioresQueMedia << std::endl;
+    std::cout << "Quantidade de números iguais à média: " << iguaisAMedia << std::endl;
+
+
+    return 0;
+}

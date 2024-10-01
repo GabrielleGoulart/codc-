@@ -1,0 +1,339 @@
+﻿5 Comando PARA:
+
+
+a-
+#include <iostream>
+
+
+int main() {
+    for (int numero = 0; numero <= 100; ++numero) {
+        // Verifica se o número é par
+        if (numero % 2 == 0) {
+            // Exibe o número par
+            std::cout << numero << std::endl;
+        }
+    }
+    
+    return 0;
+}
+
+
+
+
+b-
+#include <iostream>
+
+
+int main() {
+    int numero;
+    
+    std::cout << "Digite um número inteiro positivo: ";
+    std::cin >> numero;
+    
+    if (numero < 0) {
+        std::cout << "O número inserido não é positivo. Por favor, insira um número inteiro positivo." << std::endl;
+        return 1; 
+    }
+    
+    std::cout << "Números pares entre 0 e " << numero << ":" << std::endl;
+    for (int i = 0; i <= numero; ++i) {
+        if (i % 2 == 0) {
+            std::cout << i << std::endl;
+        }
+    }
+    
+    return 0;
+}
+
+
+
+
+
+
+c-
+#include <iostream>
+#include <string>
+
+
+int main() {
+    std::cout << "Digite uma palavra: ";
+    
+    std::string palavra;
+    std::cin >> palavra;
+    
+    std::cout << "Letras da palavra:" << std::endl;
+    for (char letra : palavra) {
+        std::cout << letra << std::endl;
+    }
+    
+    return 0;
+}
+
+
+
+
+
+
+d-
+#include <iostream>
+
+
+int main() {
+    int numero;
+
+
+    std::cout << "Digite um número inteiro positivo: ";
+    std::cin >> numero;
+
+
+    if (numero <= 0) {
+        std::cout << "O número não é positivo. Por favor, insira um número inteiro positivo." << std::endl;
+        return 1; // Termina o programa com código de erro
+    }
+
+
+    // Calcula a soma de todos os números entre 1 e o número inserido
+    int soma = 0;
+    for (int i = 1; i <= numero; ++i) {
+        soma += i;
+    }
+
+
+    // Exibe o resultado
+    std::cout << "A soma de todos os números entre 1 e " << numero << " é: " << soma << std::endl;
+
+
+    return 0;
+}
+
+
+
+
+
+
+e-
+#include <iostream>
+#include <cmath>
+
+
+bool ehPrimo(int numero) {
+    if (numero <= 1) {
+        return false;
+    }
+    if (numero == 2) {
+        return true;
+    }
+    if (numero % 2 == 0) {
+        return false;
+    }
+    int raiz = static_cast<int>(std::sqrt(numero));
+    for (int i = 3; i <= raiz; i += 2) {
+        if (numero % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+
+int main() {
+    int numero;
+
+
+    std::cout << "Digite um número inteiro: ";
+    std::cin >> numero;
+
+
+    if (ehPrimo(numero)) {
+        std::cout << numero << " é um número primo." << std::endl;
+    } else {
+        std::cout << numero << " não é um número primo." << std::endl;
+    }
+
+
+    return 0;
+}
+
+
+
+
+f-
+#include <iostream>
+#include <limits> // Para std::numeric_limits
+
+
+int main() {
+    int numero;
+    int maiorNumero = std::numeric_limits<int>::min(); 
+
+
+    std::cout << "Digite uma sequência de números inteiros (digite um número negativo para encerrar):" << std::endl;
+
+
+    while (true) {
+        std::cout << "Número: ";
+        std::cin >> numero;
+
+
+        if (numero < 0) {
+            break;
+        }
+
+
+        if (numero > maiorNumero) {
+            maiorNumero = numero;
+        }
+    }
+
+
+    if (maiorNumero == std::numeric_limits<int>::min()) {
+        std::cout << "Nenhum número válido foi inserido." << std::endl;
+    } else {
+        std::cout << "O maior número inserido é: " << maiorNumero << std::endl;
+    }
+
+
+    return 0;
+}
+
+
+
+
+
+
+g-
+#include <iostream>
+
+
+int main() {
+    // Exibe a tabuada do número 5 até o número 10:
+    for (int i = 5; i <= 10; ++i) {
+        std::cout << "Tabuada do " << i << ":" << std::endl;
+        for (int j = 1; j <= 10; ++j) {
+            std::cout << i << " x " << j << " = " << (i * j) << std::endl;
+        }
+        std::cout << std::endl; 
+    }
+    
+    return 0;
+}
+
+
+
+
+
+
+h-
+#include <iostream>
+#include <cmath> // Para std::sqrt()
+
+
+bool ehPrimo(int numero) {
+    if (numero <= 1) {
+        return false;
+    }
+    if (numero == 2) {
+        return true;
+    }
+    if (numero % 2 == 0) {
+        return false;
+    }
+    int raiz = static_cast<int>(std::sqrt(numero));
+    for (int i = 3; i <= raiz; i += 2) {
+        if (numero % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+
+int main() {
+    std::cout << "Números primos entre 1 e 100:" << std::endl;
+
+
+    // Exibe todos os números primos entre 1 e 100
+    for (int i = 1; i <= 100; ++i) {
+        if (ehPrimo(i)) {
+            std::cout << i << std::endl;
+        }
+    }
+
+
+    return 0;
+}
+
+
+
+
+i-
+#include <iostream>
+#include <cmath> // Para std::sqrt()
+
+
+bool ehPrimo(int numero) {
+    // Números menores ou iguais a 1 não são primos
+    if (numero <= 1) {
+        return false;
+    }
+   
+    if (numero == 2) {
+        return true;
+    }
+    // Números pares maiores que 2 não são primos
+    if (numero % 2 == 0) {
+        return false;
+    }
+
+
+    int raiz = static_cast<int>(std::sqrt(numero));
+    for (int i = 3; i <= raiz; i += 2) {
+        if (numero % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+
+int main() {
+    std::cout << "Números primos entre 1 e 100:" << std::endl;
+
+
+    // Exibe todos os números primos entre 1 e 100
+    for (int i = 1; i <= 100; ++i) {
+        if (ehPrimo(i)) {
+            std::cout << i << std::endl;
+        }
+    }
+
+
+    return 0;
+}
+
+
+
+
+
+
+j-
+#include <iostream>
+
+
+int main() {
+    int soma = 0;
+    
+    for (int i = 1; i <= 100; ++i) {
+        if (i % 2 == 0) {
+            soma += i;
+        }
+    }
+
+
+
+
+    std::cout << "A soma dos números pares entre 1 e 100 é: " << soma << std::endl;
+
+
+    return 0;
+}
